@@ -1,0 +1,14 @@
+{
+    "liveSassCompile.settings.generateMap": false, // 만일 .map 파일 생성을 끄고 싶다면
+    "liveSassCompile.settings.formats": [
+        // This is Default.
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "./css",
+        },
+        
+      ],
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveSassCompile.settings.compileOnWatch": true
+}
