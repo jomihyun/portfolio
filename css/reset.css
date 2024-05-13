@@ -88,7 +88,12 @@ video {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
+  font-size: 1rem;
   line-height: 1.2;
   box-sizing: border-box;
 }
