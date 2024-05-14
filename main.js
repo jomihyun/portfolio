@@ -90,9 +90,8 @@ $(function () {
       scrub: 1,
     }
   });
-  skills.fromTo('.about .skills-list li', { opacity: 0 }, { opacity: 1 });
+  skills.fromTo('.about .skills-list', { opacity: 0 }, { opacity: 1 });
 
-  // 텍스트 이동
   let bgTxt = gsap.timeline({
     scrollTrigger: {
       trigger: ".profile-detail",
@@ -100,7 +99,7 @@ $(function () {
     }
   });
   bgTxt.fromTo('.bg-txt.txt01', { x: '-100%' }, { x: '0' })
-      .fromTo('.bg-txt.txt02', { x: '100%' }, { x: '-100%' }) 
+       .fromTo('.bg-txt.txt02', { x: '100%' }, { x: '0' }) 
 
   // var txt01 = TweenMax.fromTo(".bg-txt.txt01", 0.6, { x: '50%' }, { x: '-100%' });
   // var txt02 = TweenMax.fromTo(".bg-txt.txt02", 0.6, { x: '-50%' }, { x: '100%' });
@@ -131,6 +130,16 @@ $(function () {
   // .addIndicators({
   //   name: "1"
   // });
+
+   gsap.to('.about_wrap .sub_txt.txt01',{
+    scrollTrigger: {
+        trigger: ".item01",
+        start: "top 100%",
+        end: "bottom",
+        scrub: 1,
+      },
+      x:'-50%',
+  })
 
 
 
