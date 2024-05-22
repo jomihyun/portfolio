@@ -154,6 +154,7 @@ body {
   font-size: 10rem;
   font-weight: 900;
   color: var(--color-blue);
+  margin: 0 0 10rem 0;
 }
 .about .profile-detail {
   position: relative;
@@ -174,8 +175,8 @@ body {
   top: 90%;
 }
 .about .profile .img-wrap {
-  width: 400px;
-  height: 500px;
+  width: 40rem;
+  height: 50rem;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -234,6 +235,7 @@ body {
   font-size: 1.6rem;
 }
 
+/* work */
 .work {
   background-color: var(--color-blue);
   color: #fff;
@@ -243,6 +245,7 @@ body {
   font-weight: 900;
   color: #fff;
   text-align: right;
+  margin: 0 0 10rem 0;
 }
 .work .work-item {
   display: flex;
@@ -250,7 +253,7 @@ body {
   position: relative;
 }
 .work .bg-txt {
-  font-size: 150px;
+  font-size: 15rem;
   font-weight: 700;
   white-space: nowrap;
   color: #1d4fc3;
@@ -266,6 +269,10 @@ body {
 }
 .work .img-wrap img {
   width: 100%;
+}
+.work .txt-wrap {
+  position: relative;
+  z-index: 1;
 }
 .work .txt-wrap li + li {
   margin: 1rem 0 0 0;
@@ -304,4 +311,53 @@ body {
 }
 .work .txt-wrap .btn-list li + li {
   margin: 0;
+}
+
+/* footer */
+footer {
+  background-color: var(--color-blue);
+  color: #fff;
+  text-align: center;
+}
+footer h2 {
+  font-size: 2.6rem;
+  opacity: 0.8;
+}
+footer .email {
+  display: block;
+  font-size: 4.8rem;
+  font-weight: 500;
+  padding: 3rem 0 0 0;
+}
+footer p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  opacity: 0.8;
+  padding: 3rem 0;
+}
+
+/* Arrow up */
+.arrow-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 5rem;
+  height: 5rem;
+  color: var(--color-blue);
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: -0.1rem 0 1rem 0 rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+.arrow-up img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.arrow-up.on {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
 }

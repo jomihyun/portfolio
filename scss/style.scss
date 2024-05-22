@@ -157,6 +157,7 @@ body {
         font-size: 10rem;
         font-weight: 900;
         color: var(--color-blue);
+        margin: 0 0 10rem 0;
     }
     .profile-detail{
         position: relative;
@@ -178,8 +179,8 @@ body {
     }
     .profile{
         .img-wrap{
-            width: 400px;
-            height: 500px;
+            width: 40rem;
+            height: 50rem;
             margin: 0 auto;
             overflow: hidden;            
             img{
@@ -239,6 +240,7 @@ body {
     }
 }
 
+/* work */
  .work{
     background-color: var(--color-blue);
     color: #fff;
@@ -247,6 +249,7 @@ body {
         font-weight: 900;
         color: #fff;
         text-align: right;
+        margin: 0 0 10rem 0;
     }
     .work-item{
         display: flex;
@@ -254,7 +257,7 @@ body {
         position: relative;
     }
     .bg-txt{
-        font-size: 150px;
+        font-size: 15rem;
         font-weight: 700;
         white-space: nowrap;
         color: #1d4fc3;
@@ -272,6 +275,8 @@ body {
         }
     }
     .txt-wrap{
+        position: relative;
+        z-index: 1;
         li{
             &+li{
                 margin: 1rem 0 0 0;
@@ -316,7 +321,54 @@ body {
         }
     }
  }
-  
+
+ /* footer */
+footer{
+    background-color: var(--color-blue);
+    color: #fff;
+    text-align: center;
+    h2{
+        font-size: 2.6rem;        
+        opacity: 0.8;
+    }
+    .email{
+        display: block;
+        font-size: 4.8rem;
+        font-weight: 500;   
+        padding: 3rem 0 0 0;     
+    }
+    p{
+        font-size: 1.4rem;
+        line-height: 1.5;
+        opacity: 0.8;
+        padding: 3rem 0;     
+    }
+}
+
+/* Arrow up */
+.arrow-up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 5rem;
+    height: 5rem;
+    color: var(--color-blue);
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: -0.1rem 0 1rem 0 rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    img{
+        width: 50%;
+        object-fit: contain;
+    }
+    &.on{
+        opacity: 1;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+}
   
 
 
