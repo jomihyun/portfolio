@@ -148,7 +148,7 @@ body {
 
 /* About */
 .about .inner-wrap {
-  padding: 10rem 0;
+  padding-bottom: 20rem;
 }
 .about h2 {
   font-size: 10rem;
@@ -169,10 +169,10 @@ body {
   z-index: -1;
 }
 .about .profile-detail .bg-txt.txt01 {
-  top: 30%;
+  top: 11%;
 }
 .about .profile-detail .bg-txt.txt02 {
-  top: 90%;
+  top: 95%;
 }
 .about .profile .img-wrap {
   width: 40rem;
@@ -189,18 +189,18 @@ body {
 .about .profile .tit {
   display: block;
   text-align: center;
-  font-size: 38px;
+  font-size: 3.8rem;
   font-weight: 700;
-  padding: 80px 0 0 0;
+  padding: 10rem 0 0 0;
 }
 .about .profile .desc {
   text-align: center;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 2;
-  padding: 20px 0 0 0;
+  padding: 2rem 0 0 0;
 }
 .about .skills {
-  margin-top: 10rem;
+  padding-top: 10rem;
 }
 .about .skills .tit {
   display: block;
@@ -222,7 +222,7 @@ body {
   margin: 0 2rem 2rem 0;
   padding: 1rem 0 2rem;
   text-align: center;
-  border-radius: 14px;
+  border-radius: 1.4rem;
   box-shadow: 0px 0px 1.3rem rgba(0, 0, 0, 0.05);
   background-color: #fff;
 }
