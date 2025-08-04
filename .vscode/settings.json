@@ -1,5 +1,5 @@
 {
-    "liveSassCompile.settings.generateMap": false, // 만일 .map 파일 생성을 끄고 싶다면
+    "liveSassCompile.settings.generateMap": false,
     "liveSassCompile.settings.formats": [
         // This is Default.
         {
@@ -7,8 +7,17 @@
             "extensionName": ".css",
             "savePath": "./css",
         },
-        
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "./css",
+        },
+
       ],
     "liveServer.settings.donotShowInfoMsg": true,
-    "liveSassCompile.settings.compileOnWatch": true
+    "liveSassCompile.settings.compileOnWatch": true,
+    "liveSassCompile.settings.includeItems": [
+        "/css/scss/*.scss"
+    ],
+    "liveServer.settings.port": 5501
 }
