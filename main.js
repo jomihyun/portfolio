@@ -161,37 +161,37 @@ $(function () {
 	// profile 애니메이션
 	ScrollTrigger.matchMedia({
 		// 700px 이하일 때
-		"(max-width: 700px)": function() {
-		  return gsap.fromTo('.profile__bg-text',
-			{ x: '-100%', opacity: 0 },
-			{
-			  x: '5%',               // <=700px에서는 0%
-			  opacity: 1,
-			  ease: 'power2.out',
-			  scrollTrigger: {
-				trigger: '.profile',
-				start: 'top bottom',
-				end: 'bottom top',
-				scrub: true,
-			  }
-			}
-		  );
+		"(max-width: 700px)": function () {
+			return gsap.fromTo('.profile__bg-text',
+				{ x: '-100%', opacity: 0 },
+				{
+					x: '5%',               // <=700px에서는 0%
+					opacity: 1,
+					ease: 'power2.out',
+					scrollTrigger: {
+						trigger: '.profile',
+						start: 'top bottom',
+						end: 'bottom top',
+						scrub: true,
+					}
+				}
+			);
 		},
 		// 701px 이상일 때
-		"(min-width: 701px)": function() {
+		"(min-width: 701px)": function () {
 			return gsap.fromTo('.profile__bg-text',
-			  { x: '-100%', opacity: 0 },
-			  {
-				x: '30%',              // >700px에서는 30%
-				opacity: 1,
-				ease: 'power2.out',
-				scrollTrigger: {
-				  trigger: '.profile',
-				  start: 'top bottom',
-				  end: 'bottom top',
-				  scrub: true,
+				{ x: '-100%', opacity: 0 },
+				{
+					x: '30%',              // >700px에서는 30%
+					opacity: 1,
+					ease: 'power2.out',
+					scrollTrigger: {
+						trigger: '.profile',
+						start: 'top bottom',
+						end: 'bottom top',
+						scrub: true,
+					}
 				}
-			  }
 			);
 		}
 	});
@@ -219,6 +219,46 @@ $(function () {
 				// markers: true, // 디버깅용 마커
 			}
 		});
+
+		// ScrollTrigger.matchMedia({
+		// 	// 700px 이하일 때
+		// 	"(max-width: 700px)": function() {
+		// 		return gsap.fromTo('.work-card__bg-text',{ 
+		// 			x: startX, 
+		// 			opacity: 0 				
+		// 			}, {
+		// 				x: '50%',               
+		// 				opacity: 1,
+		// 				ease: 'power2.out',
+		// 				scrollTrigger: {
+		// 					trigger: '.work',
+		// 					start: 'top bottom',
+		// 					end: 'bottom top',
+		// 					scrub: true,
+		// 				}
+		// 			}
+		// 		);
+		// 	},
+		// 	// 701px 이상일 때
+		// 	"(min-width: 701px)": function () {
+		// 		return gsap.fromTo('.work-card__bg-text',
+		// 			{ x: '-100%', opacity: 0 },
+		// 			{
+		// 				x: '30%',              // >700px에서는 30%
+		// 				opacity: 1,
+		// 				ease: 'power2.out',
+		// 				scrollTrigger: {
+		// 					trigger: '.work',
+		// 					start: 'top bottom',
+		// 					end: 'bottom top',
+		// 					scrub: true,
+		// 				}
+		// 			}
+		// 		);
+		// 	}
+		// });
+
+
 	});
 
 

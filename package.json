@@ -5,11 +5,12 @@
     "gulp-rev": "^11.0.0",
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-rev-rewrite": "^6.0.0",
+    "nodemon": "^3.1.10",
     "sass": "^1.90.0"
   },
   "scripts": {
-    "scss": "sass --watch styles.scss:styles.css",
-    "versionize": "node add-version.js"
-  },
-  "type": "module"
+    "build": "node add-version.js",
+    "watch": "nodemon --ignore index.html --exec \"npm run build\"",
+    "scss": "sass --watch styles.scss:styles.css"
+  }
 }

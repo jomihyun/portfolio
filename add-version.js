@@ -1,8 +1,7 @@
-// add-version.js
 const fs = require('fs');
 const path = require('path');
 
-const buildDir = path.resolve(__dirname); // index.html이 루트에 있다면
+const buildDir = path.resolve(__dirname);
 const htmlPath = path.join(buildDir, 'index.html');
 
 if (!fs.existsSync(htmlPath)) {
@@ -11,10 +10,13 @@ if (!fs.existsSync(htmlPath)) {
 }
 
 let html = fs.readFileSync(htmlPath, 'utf8');
-const now = Date.now(); // 타임스탬프 사용(또는 빌드 번호)
+const now = Date.now();
 
-// css, js 파일 경로에 ?v= 추가 (이미 있으면 교체)
-html = html.replace(/(\.(?:css|js))(?:\?v=\d+)?/g, `$1?v=${now}`);
+// href/src 속성 중 로컬 .css/.js 파일만 (?v=) 붙이기
+html = html.replace(
+  /(href|src)=["'](?!https?:\/\/|\/\/)([^"']+\.(?:css|js))(?:\?v=\d+)?(["'])/gi,
+  `$1="$2?v=${now}$3`
+);
 
 fs.writeFileSync(htmlPath, html, 'utf8');
-console.log('index.html에 버전 추가 완료:', now);
+console.log(`index.html에 로컬 파일 버전 추가 완료: ${now}`);

@@ -1,6 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 html, body { overflow-x: hidden; }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	white-space: nowrap
+}
+
 // 변수
 :root {
   --color-orange: #feb546;
@@ -455,8 +484,8 @@ body {
 /* 반응형 스타일 */
 @media (max-width: 1024px) {
   .section-title {
-    font-size: 6rem;
-    margin-bottom: 4rem;
+    font-size: 5rem;
+    margin-bottom: 0;
   }
 
   .work-card {
@@ -549,27 +578,29 @@ body {
     }
 
   .about {
-    .profile__image {
-        width: 50%;
-        height: auto;
-    }
 
-    .profile__bg-text{
-         font-size: 7rem;
-    }
-
-    .about__inner{
+	&__inner{
         padding: 10rem 0;
     }
 
-    .profile__title{
-        padding-top: 3rem;
-        word-break: keep-all;
-        font-size: 3rem;
-    }
+    .profile{
+		&__image {
+			width: 50%;
+			height: auto;
+		}
+		&__bg-text{
+			font-size: 7rem;
+		}
+		&__title{
+			padding-top: 3rem;
+			word-break: keep-all;
+			font-size: 3rem;
+		}
+	}
 
     .skills{
         padding-top: 6rem;
+
         .skills__item {
             margin: 1rem;
             padding: 2rem 0;
@@ -582,7 +613,7 @@ body {
 
   .work{
     &__inner{
-        padding: 10rem 0;
+        padding: 11rem 0;
     }
 
     .work-card{
@@ -600,12 +631,21 @@ body {
         }
 
         &__bg-text{
-            font-size: 8rem;
+            font-size: 7rem;
         }
     }
   }
 
-  .footer .contact__email {
-    font-size: 3rem;
-  }
+	.footer  {
+		.contact{
+			&__email{
+				font-size: 2rem;
+			}
+
+			&__notice{
+				font-size: 1rem;
+				padding-top: 1rem;
+			}
+		}   
+	}
 }
