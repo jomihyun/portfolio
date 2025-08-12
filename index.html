@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,273 +9,224 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
     <script src="./main.js"></script>
 </head>
 <body>
-    <div class="precent">
-        <span></span>
+    <div class="loading-bar">
+        <span class="loading-bar__progress"></span>
     </div>
-    <header>
-        <div class="header">
-            <div class="inner-wrap">
-                <h1><a href="#">JOMIHYUN</a></h1>
-                <ul class="navbar-menu">
-                    <li class="navbar-item"><a href="#" data-target="body">Home</a></li>
-                    <li class="navbar-item"><a href="#" data-target=".about">About</a></li>
-                    <li class="navbar-item"><a href="#" data-target=".work">My work</a></li>
-                    <li class="navbar-item"><a href="#" data-target=".contact">Contact</a></li>
+
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo"><a href="#">JOMIHYUN</a></h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" data-target="body">Home</a></li>
+                    <li class="nav__item"><a href="#" data-target=".about">About</a></li>
+                    <li class="nav__item"><a href="#" data-target=".work">My work</a></li>
+                    <li class="nav__item"><a href="#" data-target=".contact">Contact</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <div class="home">
-                <img src="images/main_bg_new.jpg" alt="" class="bg">
-                <div class="txt-wrap">
-                    <h2><span>HELLO.</span><br/>WEB PUBLISHER.</h2>
-                    <!-- <a class="more_btn" href="">자기소개서 보기</a> -->
-                </div>
-                <div class="scroll">
-                    <span></span>
-                </div>
+
+    <main class="main">
+        <!-- Home -->
+        <section class="home">
+            <img src="images/main_bg_new.jpg" alt="" class="home__bg">
+            <div class="home__text">
+                <h2 class="home__title"><span>HELLO.</span><br>WEB PUBLISHER.</h2>
             </div>
-            <div class="about">
-                <div class="inner-wrap">
-                    <h2>About Me.</h2>
-                    <div class="profile-detail">                        
-                        <span class="bg-txt txt01">나로 말할 것 같으면</span>                    
-                        <span class="bg-txt txt02">저는 이런걸 잘해요!</span>                     
-                        <div class="profile">                            
-                            <div class="img-wrap">
-                                <img src="images/jmh.jpg" alt="">
-                            </div>                        
-                            <strong class="tit">배움이 즐거운 웹퍼블리셔 조미현입니다.</strong>
-                            <p class="desc">
-                                새로운 것을 배우는 건 매우 설레는 일입니다. <br>
+            <div class="home__scroll-indicator"><span></span></div>
+        </section>
+
+        <!-- About -->
+        <section class="about">
+            <div class="about__inner">
+                <h2 class="section-title">About Me.</h2>
+
+                <div class="profile">
+                    <span class="profile__bg-text profile__bg-text--01">나로 말할 것 같으면</span>
+                    <span class="profile__bg-text profile__bg-text--02">저는 이런걸 잘해요!</span>
+
+                    <div class="profile__content">
+                        <div class="profile__image">
+                            <img src="images/jmh.jpg" alt="조미현 프로필 사진">
+                        </div>
+                        <div class="profile__info">
+                            <strong class="profile__title">배움이 즐거운 웹퍼블리셔 조미현입니다.</strong>
+                            <p class="profile__desc">
+                                새로운 것을 배우는 건 매우 설레는 일입니다.<br>
                                 항상 설레는 마음으로 배움에 감사하며 업무에 임하겠습니다.
                             </p>
                         </div>
-                        <div class="skills">
-                            <strong class="tit">My Skill</strong>                        
-                            <ul class="skills-list">
-                                <li>
-                                    <img src="images/html_logo.png" alt="HTML">
-                                    <span>HTML</span>
-                                </li>
-                                <li>
-                                    <img src="images/css_logo.png" alt="CSS">
-                                    <span>CSS</span>
-                                </li>
-                                <li>
-                                    <img src="images/js_logo.png" alt="javascript">
-                                    <span>Javascript</span>
-                                </li>
-                                <li>
-                                    <img src="images/jquery_logo.png" alt="jquery">
-                                    <span>jQuery</span>
-                                </li>
-                                <li>
-                                    <img src="images/photoshop_logo.png" alt="photoshop">
-                                    <span>Photoshop</span>
-                                </li>                               
-                                <li>
-                                    <img src="images/excel.png" alt="excel">
-                                    <span>Excel</span>
-                                </li>
-                            </ul>
-                        </div>
+                    </div>
+
+                    <div class="skills">
+                        <strong class="skills__title">My Skill</strong>
+                        <ul class="skills__list">
+                            <li class="skills__item">
+                                <img src="images/html_logo.png" alt="HTML">
+                                <span>HTML</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="images/css_logo.png" alt="CSS">
+                                <span>CSS</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="images/js_logo.png" alt="JavaScript">
+                                <span>JavaScript</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="images/jquery_logo.png" alt="jQuery">
+                                <span>jQuery</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="images/photoshop_logo.png" alt="Photoshop">
+                                <span>Photoshop</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="images/excel.png" alt="Excel">
+                                <span>Excel</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="work">
-                <div class="inner-wrap">
-                    <h2>WORKS.</h2>
-                    <div class="work-item">
-                        <span class="bg-txt">양재성모안과</span>
-                        <div class="img-wrap">
-                            <img src="images/yang.png" alt="">
+        </section>
+
+        <!-- Work -->
+        <section class="work">
+            <div class="work__inner">
+                <h2 class="section-title">WORKS.</h2>
+                <div class="work__list">
+                    <!-- 반복되는 work-card -->
+                    <article class="work-card">
+                        <span class="work-card__bg-text">양재성모안과</span>
+                        <div class="work-card__image">
+                            <img src="images/yang.png" alt="양재성모안과">
                         </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">양재성모안과 모바일</p></li>
-                                <li><p>21.01. 메인/상세페이지/유지보수운영</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://yjeye.co.kr?ps_mobile=on" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
+                        <div class="work-card__info">
+                            <p class="work-card__title">양재성모안과 모바일</p>
+                            <p class="work-card__desc">21.01. 메인/상세페이지/유지보수운영</p>
+                            <p class="work-card__stack">HTML / CSS / jQuery / JavaScript / PHP</p>
+                            <a class="work-card__link" href="http://yjeye.co.kr?ps_mobile=on" target="_blank">
+                                Learn More<i class="fi-rr-arrow-right"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">에이스 여성의원</span>
-                        <div class="img-wrap">
-                            <img src="images/ace.png" alt="">
+                    </article>
+                    <!-- 다른 항목들도 같은 구조로 반복 -->
+                    <article class="work-card">
+                        <span class="work-card__bg-text">에이스 여성의원</span>
+                        <div class="work-card__image">
+                            <img src="images/ace.png" alt="에이스 여성의원">
                         </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">에이스 여성의원</p></li>
-                                <li><p>21.02. 메인/상세페이지/게시판/유지보수운영</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://www.acewomen.co.kr" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
+                        <div class="work-card__info">
+                            <p class="work-card__title">에이스 여성의원</p>
+                            <p class="work-card__desc">21.02. 메인/상세페이지/게시판/유지보수운영</p>
+                            <p class="work-card__stack">HTML/CSS/JQUERY/JAVASCRIPT/PHP</p>
+                            <a class="work-card__link" href="http://www.acewomen.co.kr" target="_blank">
+                                Learn More<i class="fi-rr-arrow-right"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">무지개세무법인</span>
-                        <div class="img-wrap">
-                            <img src="images/rain.png" alt="">
+                    </article>
+                    <article class="work-card">
+                        <span class="work-card__bg-text">무지개세무법인</span>
+                        <div class="work-card__image">
+                            <img src="images/rain.png" alt="무지개세무법인">
                         </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">무지개세무법인</p></li>
-                                <li><p>21.03 ~ 04. 메인/상세페이지/게시판/유지보수운영</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://www.taxclinic.co.kr" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
+                        <div class="work-card__info">
+                            <p class="work-card__title">무지개세무법인</p>
+                            <p class="work-card__desc">21.03 ~ 04. 메인/상세페이지/게시판/유지보수운영</p>
+                            <p class="work-card__stack">HTML/CSS/JQUERY/JAVASCRIPT/PHP</p>
+                            <a class="work-card__link" href="http://www.taxclinic.co.kr" target="_blank">
+                                Learn More<i class="fi-rr-arrow-right"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">봉봉성형외과</span>
-                        <div class="img-wrap">
-                            <img src="images/bong.png" alt="">
+                    </article>
+                    <article class="work-card">
+                        <span class="work-card__bg-text">봉봉성형외과</span>
+                        <div class="work-card__image">
+                            <img src="images/bong.png" alt="봉봉성형외과">
                         </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">봉봉성형외과</p></li>
-                                <li><p>21.04 ~ 05. 메인/상세페이지/게시판/유지보수운영</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://www.bongbongclinic.com" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
+                        <div class="work-card__info">
+                            <p class="work-card__title">봉봉성형외과</p>
+                            <p class="work-card__desc">21.04 ~ 05. 메인/상세페이지/게시판/유지보수운영</p>
+                            <p class="work-card__stack">HTML/CSS/JQUERY/JAVASCRIPT/PHP</p>
+                            <a class="work-card__link" href="http://www.bongbongclinic.com" target="_blank">
+                                Learn More<i class="fi-rr-arrow-right"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">명진단영상검진센터</span>
-                        <div class="img-wrap">
-                            <img src="images/mung.png" alt="">
+                    </article>
+                    <article class="work-card">
+                        <span class="work-card__bg-text">명진단영상검진센터</span>
+                        <div class="work-card__image">
+                            <img src="images/mung.png" alt="명진단영상검진센터">
                         </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">명진단영상검진센터</p></li>
-                                <li><p>21.06 ~ 07. 메인/상세페이지/게시판/유지보수운영</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://mdrc.co.kr" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
+                        <div class="work-card__info">
+                            <p class="work-card__title">명진단영상검진센터</p>
+                            <p class="work-card__desc">21.06 ~ 07. 메인/상세페이지/게시판/유지보수운영</p>
+                            <p class="work-card__stack">HTML/CSS/JQUERY/JAVASCRIPT/PHP</p>
+                            <a class="work-card__link" href="http://mdrc.co.kr" target="_blank">
+                                Learn More<i class="fi-rr-arrow-right"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">담청</span>
-                        <div class="img-wrap">
-                            <img src="images/dam.png" alt="">
+                    </article>
+                    <article class="work-card">
+                        <span class="work-card__bg-text">담청</span>
+                        <div class="work-card__image">
+                            <img src="images/dam.png" alt="담청">
                         </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">담청</p></li>
-                                <li><p>21.08 ~ 09. 메인/상세페이지/게시판/유지보수운영</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://troutmarket.co.kr" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
+                        <div class="work-card__info">
+                            <p class="work-card__title">담청</p>
+                            <p class="work-card__desc">21.08 ~ 09. 메인/상세페이지/게시판/유지보수운영</p>
+                            <p class="work-card__stack">HTML/CSS/JQUERY/JAVASCRIPT/PHP</p>
+                            <a class="work-card__link" href="http://troutmarket.co.kr" target="_blank">
+                                Learn More<i class="fi-rr-arrow-right"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">비엔에프솔루션</span>
-                        <div class="img-wrap">
-                            <img src="images/bnf.png" alt="">
+                    </article>
+                    <article class="work-card">
+                        <span class="work-card__bg-text">비엔에프솔루션</span>
+                        <div class="work-card__image">
+                            <img src="images/bnf.png" alt="비엔에프솔루션">
                         </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">비엔에프솔루션</p></li>
-                                <li><p>21.10 ~ 11. 메인/상세페이지/게시판/유지보수운영/반응형</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://bnfs.co.kr" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
+                        <div class="work-card__info">
+                            <p class="work-card__title">비엔에프솔루션</p>
+                            <p class="work-card__desc">21.10. 메인/상세페이지/게시판/유지보수운영</p>
+                            <p class="work-card__stack">HTML/CSS/JQUERY/JAVASCRIPT/PHP</p>
+                            <a class="work-card__link" href="http://bnfsolution.co.kr" target="_blank">
+                                Learn More<i class="fi-rr-arrow-right"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">원정형외과</span>
-                        <div class="img-wrap">
-                            <img src="images/one.png" alt="">
-                        </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">원정형외과</p></li>
-                                <li><p>21.11 ~ 12. 메인/상세페이지/게시판/유지보수운영</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://oneos.co.kr" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">디테성형외과</span>
-                        <div class="img-wrap">
-                            <img src="images/dite.png" alt="">
-                        </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">디테성형외과</p></li>
-                                <li><p>21.11 ~ 12. 인트로페이지/메인/상세페이지/게시판</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://diteprs.co.kr" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
-                        </div>                        
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">금양</span>
-                        <div class="img-wrap">
-                            <img src="images/landing.png" alt="">
-                        </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">금양</p></li>
-                                <li><p>21.04. 랜딩페이지/유튜브API 응용</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>
-                            <a class="btn" href="http://www.keumyang.com/mall/event_mb/index.html" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>
-                        </div>  
-                    </div>
-                    <div class="work-item">
-                        <span class="bg-txt">병원 템플릿</span>
-                        <div class="img-wrap">
-                            <img src="images/temp.png" alt="">
-                        </div>
-                        <div class="txt-wrap">
-                            <ul>
-                                <li><p class="htit">병원 템플릿 샘플</p></li>
-                                <li><p>HTML/CSS/JQUERY/JAVASCRIPT/PHP</p></li>
-                            </ul>                           
-                            <a class="btn" href="https://shop.insaweb.co.kr/mall/m_mall_list.php?ps_ctid=16020000" target="_blank">Learn More<i class="fi-rr-arrow-right"></i></a>                
-                        </div>  
-                    </div>                    
+                    </article>
                 </div>
             </div>
-            
-        </div>         
+        </section>
     </main>
-    <footer>
-        <!-- Contact -->
-        <div class="contact">
-            <h2>Contact.</h2>
-            <a href="mailto:wga717@naver.com" class="email">wga717@naver.com</a>
-            <p>
-				2022 All right reserved
-				<br>
-                본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.
-			</p>    
-        </div>
+
+    <!-- Footer -->
+    <footer class="footer contact">
+        <h2 class="section-title">Contact.</h2>
+        <a href="mailto:wga717@naver.com" class="contact__email">wga717@naver.com</a>
+        <p class="contact__notice">
+            2022 All right reserved<br>
+            본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.
+        </p>
     </footer>
 
     <!-- Arrow up -->
     <button type="button" class="arrow-up">
-        <img src="images/up.png" alt="">
+        <img src="images/up.png" alt="위로 가기">
     </button>
 
     <!-- Cursor -->
     <span id="cursor"></span>
-
 </body>
 </html>
