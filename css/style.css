@@ -413,7 +413,7 @@ body {
 /* 반응형 스타일 */
 @media (max-width: 1024px) {
   .section-title {
-    font-size: 7rem;
+    font-size: 6rem;
     margin-bottom: 4rem;
   }
   .work-card {
@@ -503,6 +503,7 @@ body {
   .about .profile__title {
     padding-top: 3rem;
     word-break: keep-all;
+    font-size: 3rem;
   }
   .about .skills {
     padding-top: 6rem;
@@ -512,7 +513,7 @@ body {
     padding: 2rem 0;
   }
   .about .skills .skills__item span {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
   .work__inner {
     padding: 10rem 0;
