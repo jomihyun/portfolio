@@ -74,6 +74,57 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.26);
   }
 
+  /* 햄버거 버튼 기본 */
+    .header__toggle {
+        display: none;
+        background: transparent;
+        border: 0;
+        padding: 0.6rem;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
+        width: 4rem;
+
+        .hamburger {
+            display: inline-block;
+            width: 2.2rem;
+            height: 1.6rem;
+            position: relative;
+            span {
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: currentColor;
+                display: block;
+                transition: transform 0.25s ease, opacity 0.25s ease;
+            }
+            span:nth-child(1) { top: 0; }
+            span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+            span:nth-child(3) { bottom: 0; }
+        }
+
+        &.is-active {
+            .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            .hamburger span:nth-child(2) { opacity: 0; }
+            .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        }
+    }
+
+    .nav__overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+    }
+
   &__inner {
     display: flex;
     height: 100%;
@@ -86,6 +137,11 @@ body {
   &__logo {
     font-size: 2.4rem;
     font-weight: 600;
+  }
+
+  &.header--about{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
   }
 }
 
@@ -164,7 +220,7 @@ body {
   &__inner {
     width: 90%;
     margin: 0 auto;
-    padding-bottom: 20rem;
+    padding: 20rem 0;
   }
 
   .profile {
@@ -242,7 +298,7 @@ body {
     &__item {
       width: 25%;
       margin: 0 2rem 2rem 0;
-      padding: 1rem 0 2rem;
+      padding: 4rem 0;
       text-align: center;
       border-radius: 1.4rem;
       box-shadow: 0 0 1.3rem rgba(0, 0, 0, 0.05);
@@ -253,8 +309,10 @@ body {
       }
 
       span {
-        display: block;
-        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // padding-top: 1rem;
         font-size: 1.6rem;
       }
     }
@@ -269,6 +327,7 @@ body {
   &__inner {
     width: 90%;
     margin: 0 auto;
+    padding: 20rem 0;
   }
 
   &__list {
@@ -397,7 +456,7 @@ body {
 @media (max-width: 1024px) {
   .section-title {
     font-size: 7rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 
   .work-card {
@@ -411,37 +470,138 @@ body {
 }
 
 @media (max-width: 768px) {
-  .header__inner {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem 0;
-  }
+    br.mo{
+        display: none;
+    }
 
-  .nav__list {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    #cursor{
+     display: none;
+    }
 
-  .home__text .home__title {
-    font-size: 5rem;
+    .header {
+        .header__toggle {
+            display: block;
+            color: #fff;
+        }
 
-    span {
-      font-size: 2rem;
+        .header__inner {
+            padding: 1rem 0;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 85%;
+            max-width: 360px;
+            background: #fff;
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(.22,.9,.34,1);
+            z-index: 1000;
+            box-shadow: -8px 0 30px rgba(0,0,0,0.12);
+            color: #000;
+
+            &__list {
+              display: flex;
+              flex-direction: column;
+              gap: 1.6rem;
+              padding: 6.4rem 2.4rem;
+            }
+
+            a {
+              color: inherit;
+              font-size: 1.8rem;
+              display: block;
+              padding: .8rem 0;
+            }
+        }
+        &.header--open .header__toggle {
+            color: #000;
+            z-index: 9999;
+        }
+    }
+
+    .nav.nav--open {
+      transform: translateX(0%);
+    }
+
+    .nav__overlay.is-active {
+      display: block;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* 화면에서 .nav 숨기고 데스크탑 레이아웃 무시시키기 위해 원래 위치에서 빼기 */
+    .header .nav { display: block; } /* 유지하되 위치는 fixed로 변경 */
+
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home__text .home__title {
+        font-size: 5rem;
+
+        span {
+            font-size: 2rem;
+        }
+    }
+
+  .about {
+    .profile__image {
+        width: 50%;
+        height: auto;
+    }
+
+    .profile__bg-text{
+         font-size: 7rem;
+    }
+
+    .about__inner{
+        padding: 10rem 0;
+    }
+
+    .profile__title{
+        padding-top: 3rem;
+        word-break: keep-all;
+    }
+
+    .skills{
+        padding-top: 6rem;
+        .skills__item {
+            margin: 1rem;
+            padding: 2rem 0;
+            span{
+                font-size: 1.8rem;
+            }
+        }
     }
   }
 
-  .about .profile__image {
-    width: 100%;
-    height: auto;
-  }
+  .work{
+    &__inner{
+        padding: 10rem 0;
+    }
 
-  .skills__item {
-    width: 45%;
-    margin: 1rem;
-  }
+    .work-card{
+        &__title {
+            font-size: 2.5rem;
+        }
 
-  .work-card__title {
-    font-size: 2.5rem;
+        &__info{
+            width: 100%;
+            text-align: center;
+        }
+
+        &__link{
+            margin: 3rem auto 0;
+        }
+
+        &__bg-text{
+            font-size: 8rem;
+        }
+    }
   }
 
   .footer .contact__email {

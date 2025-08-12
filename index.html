@@ -25,7 +25,15 @@
     <header class="header">
         <div class="header__inner">
             <h1 class="header__logo"><a href="#">JOMIHYUN</a></h1>
-            <nav class="nav">
+            <!-- mobile -->
+            <button class="header__toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-nav">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <nav class="nav" id="main-nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#" data-target="body">Home</a></li>
                     <li class="nav__item"><a href="#" data-target=".about">About</a></li>
@@ -34,6 +42,8 @@
                 </ul>
             </nav>
         </div>
+        <!-- 오버레이(모바일 메뉴 열릴 때 배경 클릭으로 닫기) -->
+        <div class="nav__overlay" aria-hidden="true"></div>
     </header>
 
     <main class="main">
@@ -62,7 +72,7 @@
                         <div class="profile__info">
                             <strong class="profile__title">배움이 즐거운 웹퍼블리셔 조미현입니다.</strong>
                             <p class="profile__desc">
-                                새로운 것을 배우는 건 매우 설레는 일입니다.<br>
+                                새로운 것을 배우는 건 매우 설레는 일입니다.<br class="mo">
                                 항상 설레는 마음으로 배움에 감사하며 업무에 임하겠습니다.
                             </p>
                         </div>
@@ -72,28 +82,42 @@
                         <strong class="skills__title">My Skill</strong>
                         <ul class="skills__list">
                             <li class="skills__item">
-                                <img src="images/html_logo.png" alt="HTML">
+                                <!-- <img src="images/html_logo.png" alt="HTML"> -->
                                 <span>HTML</span>
                             </li>
                             <li class="skills__item">
-                                <img src="images/css_logo.png" alt="CSS">
+                                <!-- <img src="images/css_logo.png" alt="CSS"> -->
                                 <span>CSS</span>
                             </li>
                             <li class="skills__item">
-                                <img src="images/js_logo.png" alt="JavaScript">
+                                <span>SCSS</span>
+                            </li>
+                            <li class="skills__item">
+                                <!-- <img src="images/js_logo.png" alt="JavaScript"> -->
                                 <span>JavaScript</span>
                             </li>
                             <li class="skills__item">
-                                <img src="images/jquery_logo.png" alt="jQuery">
+                                <!-- <img src="images/jquery_logo.png" alt="jQuery"> -->
                                 <span>jQuery</span>
                             </li>
                             <li class="skills__item">
-                                <img src="images/photoshop_logo.png" alt="Photoshop">
-                                <span>Photoshop</span>
+                                <span>figma</span>
                             </li>
                             <li class="skills__item">
-                                <img src="images/excel.png" alt="Excel">
-                                <span>Excel</span>
+                                <span>Jira</span>
+                            </li>
+                            <li class="skills__item">
+                                <span>Git</span>
+                            </li>
+                            <li class="skills__item">
+                                <span>slack</span>
+                            </li>
+                            <li class="skills__item">
+                                <span>webpack</span>
+                            </li>
+                            <li class="skills__item">
+                                <!-- <img src="images/photoshop_logo.png" alt="Photoshop"> -->
+                                <span>Photoshop</span>
                             </li>
                         </ul>
                     </div>
@@ -106,7 +130,6 @@
             <div class="work__inner">
                 <h2 class="section-title">WORKS.</h2>
                 <div class="work__list">
-                    <!-- 반복되는 work-card -->
                     <article class="work-card">
                         <span class="work-card__bg-text">양재성모안과</span>
                         <div class="work-card__image">
@@ -121,7 +144,6 @@
                             </a>
                         </div>
                     </article>
-                    <!-- 다른 항목들도 같은 구조로 반복 -->
                     <article class="work-card">
                         <span class="work-card__bg-text">에이스 여성의원</span>
                         <div class="work-card__image">
