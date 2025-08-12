@@ -66,7 +66,7 @@ $(function () {
 			$('.header').removeClass('on');
 		}
 
-		const homeOffsetTop = $('.home').offset().top;
+		const homeOffsetTop = $('.about').offset().top;
 		if (currentScrollPos > homeOffsetTop) {
 			$('.arrow-up').addClass('on');
 		} else {
