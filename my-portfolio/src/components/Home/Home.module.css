@@ -1,0 +1,5 @@
+.home { padding:80px 0; background: linear-gradient(180deg,#fafafa,#fff); }
+.container { max-width:1200px; margin:0 auto; padding:0 20px; text-align:center; }
+.title { font-size:28px; margin-bottom:8px; }
+.subtitle { color:#666; margin-bottom:20px; }
+.cta { display:inline-block; background:#111; color:#fff; padding:10px 16px; border-radius:4px; }

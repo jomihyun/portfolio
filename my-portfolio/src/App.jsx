@@ -9,8 +9,9 @@ import Footer from './components/Footer/Footer';
 export default function App() {
   return (
     <>
+      <a href="#main" className="skipLink">메인으로 건너뛰기</a>
       <Header />
-      <main>
+      <main id="main" tabIndex={-1}>
         <Home />
         <About />
         <WorkList />
