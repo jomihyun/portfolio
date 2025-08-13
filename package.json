@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.0",
     "del": "^8.0.0",
     "gulp": "^5.0.1",
     "gulp-rev": "^11.0.0",
@@ -11,6 +13,23 @@
   "scripts": {
     "build": "node add-version.js",
     "watch": "nodemon --ignore index.html --exec \"npm run build\"",
-    "scss": "sass --watch styles.scss:styles.css"
-  }
+    "scss": "sass --watch styles.scss:styles.css",
+    "serve": "browser-sync start --server --files \"styles.css, *.html\"",
+    "dev": "concurrently \"npm run scss\" \"npm run serve\""
+  },
+  "name": "por",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jomihyun/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jomihyun/portfolio/issues"
+  },
+  "homepage": "https://github.com/jomihyun/portfolio#readme",
+  "description": ""
 }

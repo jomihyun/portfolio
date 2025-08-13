@@ -19,4 +19,4 @@ html = html.replace(
 );
 
 fs.writeFileSync(htmlPath, html, 'utf8');
-console.log(`index.html에 로컬 파일 버전 추가 완료: ${now}`);
+console.log(`index.html에 추가 완료: ${now}`);
