@@ -139,8 +139,8 @@ $(function () {
 		scrub: 1,
 		}
 	})
-	.to('home__bg', { scale: 1.3 })
-	.fromTo('.home__title', { opacity: 0 }, { opacity: 1, delay: 0.2 })
+	.to('.home__bg', { scale: 1.3 })
+	.fromTo('.home__text', { opacity: 0 }, { opacity: 1, delay: 0.2 })
 	.to('.header', { y: 0 }, '<'); // 헤더는 이미 위에 다른 스크롤 로직이 있지만, 만약을 대비하여 timeline에 추가. (<는 이전 트윈과 동시에 시작)
 
 	// About 애니메이션
@@ -223,11 +223,11 @@ $(function () {
 		// ScrollTrigger.matchMedia({
 		// 	// 700px 이하일 때
 		// 	"(max-width: 700px)": function() {
-		// 		return gsap.fromTo('.work-card__bg-text',{ 
-		// 			x: startX, 
-		// 			opacity: 0 				
+		// 		return gsap.fromTo('.work-card__bg-text',{
+		// 			x: startX,
+		// 			opacity: 0
 		// 			}, {
-		// 				x: '50%',               
+		// 				x: '50%',
 		// 				opacity: 1,
 		// 				ease: 'power2.out',
 		// 				scrollTrigger: {

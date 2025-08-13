@@ -195,6 +195,16 @@ body {
   background: rgb(23, 54, 92);
   height: 100vh;
 
+  &__title {
+    font-size: 8.5rem;
+    font-weight: 700;
+  }
+
+  &__kicker{
+    font-weight: 400;
+    font-size: 3rem;
+  }
+
   &__bg {
     width: 100%;
     height: 100%;
@@ -209,16 +219,6 @@ body {
     transform: translateY(-50%);
     text-align: center;
     color: #fff;
-
-    .home__title {
-      font-size: 8.5rem;
-      font-weight: 700;
-
-      span {
-        font-weight: 400;
-        font-size: 3rem;
-      }
-    }
   }
 
   &__scroll-indicator {
@@ -569,12 +569,14 @@ body {
         justify-content: center;
     }
 
-    .home__text .home__title {
+    .home{
+      &__title {
         font-size: 5rem;
+      }
 
-        span {
-            font-size: 2rem;
-        }
+      &__kicker{
+        font-size: 3rem;
+      }
     }
 
   .about {
@@ -646,6 +648,6 @@ body {
 				font-size: 1rem;
 				padding-top: 1rem;
 			}
-		}   
+		}
 	}
 }
